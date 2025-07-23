@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg bg-info">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold mx-4 text-light" href="#">T.T.C</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active text-light" href="faq.html">Faq</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex mx-4" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- contact-->
+    <h1 class="text-center p-4">Contact Us</h1>
+    <div class="container p-3">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <form onsubmit="ValidateCheckbox()">
+                            <div class="mb-3">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" id="user_name">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Cell Number</label>
+                                <input type="cell" class="form-control" id="user_cell">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="user_email"
+                                    aria-describedby="emailHelp">
+                                
+                            </div>
+                            <div class="mb-3">
+                                <label  class="form-label">Example Textarea </label>
+                               <textarea name="" class="form-control" id="user_area"></textarea>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="agree">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-0 overflow-hidden">
+                    <img src="img/c.jpg" height="450" class="card-img-top" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- map  -->
+    <div class="container">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3633.6820740997873!2d88.602322325356!3d24.392360878237895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fbef2a74af990d%3A0x58f4884b87732342!2sTTC%20Rajshahi!5e0!3m2!1sen!2sbd!4v1753291324231!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="container d-flex justify-content-between p-3">
+            <p>All right reserved &copy; Raj T.T.C</p>
+            <div>
+                <img src="fb.svg" width="25" alt="">
+                <img src="fb.svg" width="25" alt="">
+                <img src="fb.svg" width="25" alt="">
+                <img src="fb.svg" width="25" alt="">
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function ValidateCheckbox(){
+            var a = document.getElementById('user_name').value.trim();
+            var b = document.getElementById('user_cell').value.trim();
+            var c = document.getElementById('user_email').value.trim();
+            var d = document.getElementById('user_area').value.trim();
+            var e = document.getElementById('agree');
+            if( a == ""|| b == ""|| c == ""|| d == ""|| !e.checked ){
+                window.alert('Invalid Input');
+            } else{
+                 window.alert('Success Input');
+            }
+          
+        }
+    </script>
+</body>
+
+</html>
